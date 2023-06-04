@@ -12,11 +12,21 @@
 }
 else
 {
-    <ul>
-        <li><strong>Customer</strong></li>
-        @foreach (var item in Model.Movies)
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.Movies)
         {
-            <li><a href="/Customers/Movies/@item.Id">@item.Name</a></li>
+            <tr>
+                <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                <td>@movie.Genre.Name</td>
+            </tr>
         }
-    </ul>
+    </tbody>
+</table>
 }
