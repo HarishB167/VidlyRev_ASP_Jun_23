@@ -54,9 +54,9 @@ namespace VidlyRev
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "201977166158847",
+               appSecret: "1ecd3a5a4cbf5cbd44605c8064526760");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
